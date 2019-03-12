@@ -1,1 +1,35 @@
-# A-Game
+<!DOCTYPE html>
+<html>
+<h1><img src="Pictures/agame logo.jpg"</h1>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="home.css">
+</head>
+
+</body>
+<div id="navbar">
+  <a class="active" href="home.html">Home</a>
+  <a href="contact Us.html">Contact</a>
+  <a href="reviews.html">Reviews</a>
+  <input type="text" align="right"placeholder="Search..">
+</div>
+
+<div style="padding-left:16px">
+
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+</body>
+</html>
