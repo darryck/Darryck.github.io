@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<h1><img src="Pictures/agame logo.jpg"</h1>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="home.css">
+</head>
+
+</body>
+<div id="navbar">
+  <a href="home.html">Home</a>
+  <a href="contact Us.html">Contact</a>
+  <a class="active" href="reviews.html">Reviews</a>
+  <input type="text" align="right"placeholder="Search..">
+</div>
+
+<div style="padding-left:16px">
+
+<div id="google-reviews"></div>
+
+<link rel="stylesheet" href="https://cdn.rawgit.com/stevenmonson/googleReviews/master/google-places.css">
+
+<script src="https://cdn.jsdelivr.net/gh/stevenmonson/googleReviews@6e8f0d794393ec657dab69eb1421f3a60add23ef/google-places.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDeivU57j-macv2fXXgbhKGM6cqMLmnAFI&signed_in=true&libraries=places"></script>
+
+<script>
+jQuery(document).ready(function( $ ) {
+   $("#google-reviews").googlePlaces({
+        placeId: 'ChIJ4d84Q8X8wIcRk3bcQJ1417Y' //Find placeID @: https://developers.google.com/places/place-id
+      , render: ['reviews']
+      , min_rating: 4
+      , max_rows:4
+   });
+});
+</script>
+
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+</body>
+</html>
